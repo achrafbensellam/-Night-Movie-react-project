@@ -120,7 +120,7 @@
 /* !PLACEHOLDER */
 
 .movies-placeholder {
-  min-height: 16rem;
+  /* min-height: 16rem; */
   border: 1px dashed #414653;
   border-radius: 1rem;
   display: flex;
