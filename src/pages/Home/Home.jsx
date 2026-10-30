@@ -3,7 +3,7 @@ import pic1 from '../../assets/img/pic1.jpg'
 import pic2 from '../../assets/img/pic2.jpg'
 import pic3 from '../../assets/img/pic3.jpg'
 import MovieCard from './components/movieCrad';
-function Home() {
+function Home({ addToWatchlist }) {
     // function HomePage() {
     const moviesArray = [
         { id: 1, title: 'Midnight Orbit', image: pic1, genre: 'Sci-Fi', description: 'One astronaut, one mysterious signal, and a midnight discovery.' },
@@ -70,19 +70,21 @@ function Home() {
                     {/* achraf et nawfal */}
                     <div className="movies-placeholder">
 
-                        
-                            <div className='MoviesDIVScards'>
-                                {moviesArray.map((e) => (
-                                    <MovieCard
-                                        key={e.id}
-                                        id={e.id}
-                                        title={e.title}
-                                        image={e.image}
-                                        genre={e.genre}
-                                        description={e.description}
-                                    />
-                                ))}
-                            </div>
+
+                        <div className='MoviesDIVScards'>
+                            {moviesArray.map((e) => (
+                                <MovieCard
+                                    key={e.id}
+                                    id={e.id}
+                                    title={e.title}
+                                    image={e.image}
+                                    genre={e.genre}
+                                    description={e.description}
+                                    addToWatchlist={addToWatchlist}
+
+                                />
+                            ))}
+                        </div>
                     </div>
                 </section>
             </main>

@@ -1,22 +1,31 @@
 import './movieCrad.css';
 function MovieCard(props) {
-    return(
+    return (
         <>
-        <div className='movieCard'>
-            <div>
+            <div className='movieCard'>
                 <div>
-                    <img className='CardPic' src={props.image} alt="" />
+                    <div>
+                        <img className='CardPic' src={props.image} alt="" />
+                    </div>
+                    <p className='movieCardCategory'>{props.genre}</p>
                 </div>
-                <p className='movieCardCategory'>{props.genre}</p>
+                <div className='movieCardInfo'>
+                    <p className='movieCardInfoPara1'>2025 - 109 min</p>
+                    <p className='movieCardInfoPara2'>{props.title}</p>
+                    <p className='movieCardInfoPara3'>{props.description}</p>
+                    <button className='movieCardBTN'
+                        onClick={() => props.addToWatchlist({
+                            id: props.id,
+                            title: props.title,
+                            image: props.image,
+                            genre: props.genre,
+                            description: props.description
+                        })}>
+                        + Add to watch list
+                    </button>
+                </div>
             </div>
-            <div className='movieCardInfo'>
-                <p className='movieCardInfoPara1'>2025 - 109 min</p>
-                <p className='movieCardInfoPara2'>{props.title}</p>
-                <p className='movieCardInfoPara3'>{props.description}</p>
-                <button className='movieCardBTN'>+ Add to watch list</button>
-            </div>
-        </div>
         </>
     )
 }
-export default MovieCard ;
+export default MovieCard;
