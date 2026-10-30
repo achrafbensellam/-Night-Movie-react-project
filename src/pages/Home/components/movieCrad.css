@@ -62,3 +62,26 @@
 .movieCardBTN:hover{
     box-shadow: 1px 1px 10px 1px;
 }
+
+
+/* Home Movies Responsive */
+@media (max-width: 1000px) {
+    .home-page .MoviesDIVScards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 700px) {
+    .home-page .MoviesDIVScards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .home-page .MoviesDIVScards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
