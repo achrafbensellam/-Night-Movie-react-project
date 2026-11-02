@@ -21,14 +21,27 @@ function Watchlist({ watchlist, removeMovieWatchlist }) {
           </div>
 
         ) : (
-          <div >
+          <div className='MoviesDIVScards'>
             {watchlist.map((movie) => (
               <div className='movieCard' key={movie.id}>
+                <div>
+                  <div>
+                    <img
+                      className='CardPic'
+                      src={movie.image}
+                      alt={movie.title}
+                    />
+                  </div>
 
+                  <p className='movieCardCategory'>
+                    {movie.genre}
+                  </p>
+                </div>
+{/* 
                 <img className="CardPic"
-                  src={movie.image} alt={movie.title} />
+                  src={movie.image} alt={movie.title} /> */}
 
-                <p className='movieCardCategory'>{movie.genre}</p>
+                {/* <p className='movieCardCategory'>{movie.genre}</p> */}
                 <div className='movieCardInfo'>
                   <p className='movieCardInfoPara1'>2025 - 109 min</p>
 
